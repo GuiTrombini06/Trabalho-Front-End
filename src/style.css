@@ -1,7 +1,6 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(141, 247, 211);
-    background-size: cover;
+    background: linear-gradient(135deg, #f7b64e, #ff7f50);
     color: #fff;
     margin: 0;
     padding: 0;
@@ -9,11 +8,20 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: linear-gradient(-45deg, #0d1b2a, #1b263b, #415a77);
+    background-size: 400% 400%;
+    animation: gradientAnimation2 8s ease infinite;
+}
+
+@keyframes gradientAnimation2 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 a {
     text-decoration: none;
-    color: aquamarine;
+    color: rgb(10, 98, 180);
 }
 
 #login {
@@ -24,15 +32,18 @@ a {
     flex-direction: row;
 }
 
-.name input {
-    border-radius: 15px;
-    border: none;
-    width: 250px;
-    height: 40px;
-    padding-left: 15px;
-    background-color: #1e1c2e;
-    color: #b6b6b6;
-    margin-bottom: 15px;
+.caixa {
+    padding: 50px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #eeae48, #ff7f50);
+    width: 300px;
+    
+}
+
+.caixa h1{
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .email input {
@@ -66,6 +77,10 @@ a {
     color: #dbd5d5;
 }
 
+.entrar p{
+    margin: 20px;
+}
+
 input::placeholder {
     color: #b6b6b6;
 }
@@ -74,14 +89,20 @@ h1 {
     color: #FAFAFA;
 }
 
-.caixa {
-    margin-top: 65px;
-    padding: 50px;
-    padding-bottom: 60px;
-    border-radius: 30px;
-    background-color: rgb(121, 85, 85);
-}
 
 input:focus {
     outline: none;
+}
+
+/*Página do cadastro */
+
+.name input {
+    border-radius: 15px;
+    border: none;
+    width: 250px;
+    height: 40px;
+    padding-left: 15px;
+    background-color: #1e1c2e;
+    color: #b6b6b6;
+    margin-bottom: 15px;
 }

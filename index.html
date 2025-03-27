@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="src/style.css">
+
     <title>ENTRAR</title>
  
 </head>
@@ -25,22 +28,23 @@
             <h1>LOGIN</h1>
 
             <div class="email">
-                <input type="email" placeholder="E-mail">
+                <input type="email" placeholder="E-mail" required>
             </div>
 
             <div class="senha">
-                <input type="text" placeholder="Senha">
+                <input type="text" placeholder="Senha" minlength=4 maxlength=20 required>
             </div>
 
             <div class="entrar">
-                <p>Ainda não tem uma conta? <a href="cadastro.html">Crie uma.</a></p>
-                <input type="submit" value="Entrar">
+                <p>Ainda não tem uma conta? <br> <a href="cadastro.html">Cadastrar-se.</a></p>
+                <a href="Main.html"><input type="submit" value="Entrar"></a>
             </div>
 
         </div>
 
     </div>
-    
+ 
+
 </body>
 
 </html>
