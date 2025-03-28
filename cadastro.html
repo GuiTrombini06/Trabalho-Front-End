@@ -1,76 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
     <link rel="stylesheet" href="src/reset.css">
-
+    <link rel="stylesheet" href="src/style.css">
     <title>CADASTRE-SE</title>
 </head>
-<body>
 
-    <!DOCTYPE html>
+<body id="principal">
 
-    <html lang="en">
-    
-    <head>
-    
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    
-        <link rel="stylesheet" href="src/reset.css">
-        <link rel="stylesheet" href="src/style.css">
-    
-        <title>CADASTRE-SE</title>
-     
-    </head>
-    
-    <body id="principal">
-    
-        <div id="login">
-    
-            
-            <div class="caixa">
-                
-                <h1>CADASTRE-SE</h1>
-    
+    <div id="login">
+        <div class="caixa">
+            <h1>CADASTRE-SE</h1>
+            <form id="cadastroForm">
                 <div class="name">
-                    <input type="text" placeholder="Nome" minlength="3" maxlength="50" required>
+                    <input type="text" id="nome" placeholder="Nome" minlength="3" maxlength="50" required>
+                    <p class="erro" id="erroNome" style="display: none;"></p>
                 </div>
 
                 <div class="email">
-                    <input type="email" placeholder="E-mail" required>
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <p class="erro" id="erroEmail" style="display: none;"></p>
                 </div>
-    
+
                 <div class="senha">
-                    <input type="text" placeholder="Senha" minlength=4 maxlength=20 required>
+                    <input type="password" id="senha" placeholder="Senha" minlength="4" maxlength="20" required>
+                    <p class="erro" id="erroSenha" style="display: none;"></p>
                 </div>
                 
                 <div class="senha">
-                    <input type="text" placeholder="Confirme a sua Senha" size=5 minlength=4 maxlength=20 required>
+                    <input type="password" id="confirmarSenha" placeholder="Confirme a sua Senha" minlength="4" maxlength="20" required>
+                    <p class="erro" id="erroConfirmarSenha" style="display: none;"></p>
                 </div>
+                
 
                 <div class="entrar">
                     <p>Já tem uma conta? <br> <a href="index.html">Fazer Login.</a></p>
-                    <a href="index.html"><input type="submit" value="Cadastrar"></a>
+                    <input type="submit" id="cadastrarBtn" value="Cadastrar" >
                 </div>
-    
-            </div>
-    
+            </form>
         </div>
-     
-    
-    </body>
-    
-    </html>
+    </div>
+
+    <script src = 'Scripts/ScriptPgCadastro.js' ></script>
 
 </body>
-</html>

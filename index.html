@@ -15,35 +15,39 @@
     <link rel="stylesheet" href="src/style.css">
 
     <title>ENTRAR</title>
- 
+
 </head>
 
 <body id="principal">
 
     <div id="login">
 
-        
         <div class="caixa">
-            
+
             <h1>LOGIN</h1>
 
-            <div class="email">
-                <input type="email" placeholder="E-mail" required>
-            </div>
+            <form id="loginForm"> 
 
-            <div class="senha">
-                <input type="text" placeholder="Senha" minlength=4 maxlength=20 required>
-            </div>
+                <div class="email">
+                    <input type="email" id="email" placeholder="E-mail" required>
+                    <p class="erro" id="erroEmail"></p> <!-- class erro é para o CSS e id erroEmail é para o JS -->
+                </div>
+        
+                <div class="senha">
+                    <input type="password" id="senha" placeholder="Senha" minlength="4" maxlength="20" required>
+                    <p class="erro" id="erroSenha"></p> <!-- class erro é para o CSS e id erroSenha é para o JS -->
+                </div>
+        
+                <div class="entrar">
+                    <p>Ainda não tem uma conta? <br> <a href="cadastro.html">Cadastrar-se.</a></p>
+                    <input type="submit" id="entrarBtn" value="Entrar"> <!--  id entrarBtn é para o JS -->
+                </div>
 
-            <div class="entrar">
-                <p>Ainda não tem uma conta? <br> <a href="cadastro.html">Cadastrar-se.</a></p>
-                <a href="Main.html"><input type="submit" value="Entrar"></a>
-            </div>
+            </form>
 
         </div>
 
-    </div>
- 
+        <script src = 'Scripts/JavaScript.js' ></script>
 
 </body>
 
