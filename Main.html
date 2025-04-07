@@ -1,23 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-
-    <link rel="stylesheet" href="src/reset.css">
-    <link rel="stylesheet" href="src/footer.css">
-
-    <title>Photos</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeria Cultural do Brasil</title>
+  <link rel="stylesheet" href="src/main.css">
 </head>
 <body>
+  <header>
+    <h1>Galeria Cultural do Brasil</h1>
+    <p>Explore alguns dos lugares e símbolos mais belos do nosso país.</p>
+  </header>
 
-    <div class="footer">
-        <p> © 2025 - Todos os direitos reservados | <a href="#">Política de Privacidade</a></p>
-     </div>
+  <main>
     
+    <div class="carousel-container">
+      <button class="nav prev">&#10094;</button>
+      <div class="galeria" id="galeria">
+        <div class="foto"><img src="https://i0.wp.com/bonitour.com.br/wp-content/uploads/2023/10/Blog-Patrimonio-historico-e-cultural-Bonitour-Viagens_Capa.webp?resize=960%2C547&ssl=1" alt="Bonito" /></div>
+        <div class="foto"><img src="https://i.pinimg.com/originals/ac/51/19/ac5119db93d387c93fe724b5c5611ada.jpg" alt="Festa típica brasileira" /></div>
+        <div class="foto"><img src="https://wordpress-cms-mv-prod-assets.quero.space/uploads/2023/08/bondinho-pao-de-acucar-1024x615.jpg" alt="Pão de Açúcar - RJ" /></div>
+        <div class="foto"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJPMeBWwWHfxuDBfR6pXA95ZLRC4VJ4qtz8A&s" alt="Arte e cultura brasileira" /></div>
+        <div class="foto"><img src="https://f.i.uol.com.br/fotografia/2017/09/27/150653546959cbe82dab848_1506535469_3x2_rt.jpg" alt="Brasil" /></div>
+        <div class="foto"><img src="https://www.kayak.com.br/news/wp-content/uploads/sites/12/2018/08/Olinda-capa-G.jpg" alt="Olinda" /></div>
+        <div class="foto"><img src="https://cdn.vaidepromo.com.br/blog/2024/09/Conheca-os-principais-pontos-turisticos-do-Brasil-com-o-Vai-de-Promo-min-1024x682.jpg" alt="Rio" /></div>
+        <div class="foto"><img src="https://b1614029.smushcdn.com/1614029/wp-content/uploads/2021/11/Lugares-historicos-o-que-caracteriza.jpg?lossy=2&strip=1&webp=1" alt="Janeiro" /></div>
+      </div>
+      <button class="nav next">&#10095;</button>
+    </div>
+
+    <section class="galeria-grid">
+      <div class="foto"><img src="https://i0.wp.com/bonitour.com.br/wp-content/uploads/2023/10/Blog-Patrimonio-historico-e-cultural-Bonitour-Viagens_Capa.webp?resize=960%2C547&ssl=1" alt="Bonito" /></div>
+      <div class="foto"><img src="https://i.pinimg.com/originals/ac/51/19/ac5119db93d387c93fe724b5c5611ada.jpg" alt="Festa típica brasileira" /></div>
+      <div class="foto"><img src="https://wordpress-cms-mv-prod-assets.quero.space/uploads/2023/08/bondinho-pao-de-acucar-1024x615.jpg" alt="Pão de Açúcar - RJ" /></div>
+      <div class="foto"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJPMeBWwWHfxuDBfR6pXA95ZLRC4VJ4qtz8A&s" alt="Arte e cultura brasileira" /></div>
+      <div class="foto"><img src="https://f.i.uol.com.br/fotografia/2017/09/27/150653546959cbe82dab848_1506535469_3x2_rt.jpg" alt="Brasil" /></div>
+      <div class="foto"><img src="https://www.kayak.com.br/news/wp-content/uploads/sites/12/2018/08/Olinda-capa-G.jpg" alt="Olinda" /></div>
+      <div class="foto"><img src="https://cdn.vaidepromo.com.br/blog/2024/09/Conheca-os-principais-pontos-turisticos-do-Brasil-com-o-Vai-de-Promo-min-1024x682.jpg" alt="Rio" /></div>
+      <div class="foto"><img src="https://b1614029.smushcdn.com/1614029/wp-content/uploads/2021/11/Lugares-historicos-o-que-caracteriza.jpg?lossy=2&strip=1&webp=1" alt="Janeiro" /></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Galeria Cultural Brasileira. Todos os direitos reservados.</p>
+  </footer>
+
+    <script src="/Scripts/scrpitmain.js"></script> 
 </body>
 </html>
