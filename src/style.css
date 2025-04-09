@@ -115,3 +115,90 @@ input:focus {
     color: #b6b6b6;
     margin-bottom: 15px;
 }
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+        height: auto;
+    }
+
+    #login {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .caixa {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .caixa h1 {
+        font-size: 32px;
+    }
+
+    .email input,
+    .senha input,
+    .name input {
+        width: 100%;
+    }
+
+    .entrar input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .entrar p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 20px;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    #login {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .caixa {
+        width: 90%;
+        padding: 30px 20px;
+        box-sizing: border-box;
+    }
+
+    .caixa h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .email input,
+    .senha input,
+    .name input {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .entrar input {
+        width: 100%;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .entrar p {
+        font-size: 14px;
+    }
+
+    .erro {
+        font-size: 12px;
+    }
+}

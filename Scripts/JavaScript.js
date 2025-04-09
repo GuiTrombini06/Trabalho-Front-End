@@ -1,61 +1,67 @@
-// Aguarda o carregamento completo da página antes de executar o script
+// Aguarda o carregamento completo do DOM antes de executar o script
 document.addEventListener("DOMContentLoaded", function () {
 
-  // Obtendo os elementos do formulário
-  const email = document.getElementById("email"); // Campo de e-mail
-  const senha = document.getElementById("senha"); // Campo de senha
-  const entrarBtn = document.getElementById("entrarBtn"); // Botão de entrar
-  const erroEmail = document.getElementById("erroEmail"); // Mensagem de erro do e-mail
-  const erroSenha = document.getElementById("erroSenha"); // Mensagem de erro da senha
+  // Seleciona os campos de entrada e mensagens de erro
+  const email = document.getElementById("email");         // Campo de email do formulário
+  const senha = document.getElementById("senha");         // Campo de senha do formulário
+  const erroEmail = document.getElementById("erroEmail"); // Elemento para exibir erro do email
+  const erroSenha = document.getElementById("erroSenha"); // Elemento para exibir erro da senha
 
-  let tentouEnviar = false; // Variável para rastrear se o usuário já tentou enviar o formulário
+  // Variável usada para saber se o usuário já tentou enviar o formulário
+  let tentouEnviar = false;
 
+  // Função para validar os campos do formulário
   function validarCampos() {
+    let valido = true; // Assume que os campos estão válidos
 
-    let valido = true; // Assume que os campos são válidos por padrão
-
-    // Só exibe os erros se o usuário já tentou enviar o formulário
     if (tentouEnviar) {
-
-      // Verifica se o campo de e-mail está vazio
+      // Verifica se o campo de email está vazio
       if (email.value.trim() === "") {
-        erroEmail.textContent = "O e-mail é obrigatório!"; // Define a mensagem de erro
-        erroEmail.style.display = "block"; // Exibe a mensagem de erro
-        valido = false; // Indica que há erro no formulário
+        erroEmail.style.display = "block"; // Exibe o erro do email
+        valido = false; // Invalida o formulário
       } else {
-        erroEmail.style.display = "none"; // Oculta a mensagem de erro se o campo estiver preenchido
+        erroEmail.style.display = "none"; // Esconde o erro do email
       }
 
-      // Verifica se a senha tem pelo menos 4 caracteres
-      if (senha.value.trim().length < 4) {
-        erroSenha.style.display = "block"; // Exibe a mensagem de erro
-        valido = false; // Indica que há erro no formulário
+      // Verifica se o campo de senha está vazio
+      if (senha.value.trim() === "") {
+        erroSenha.style.display = "block"; // Exibe o erro da senha
+        valido = false; // Invalida o formulário
       } else {
-        erroSenha.style.display = "none"; // Oculta a mensagem de erro se o campo estiver correto
+        erroSenha.style.display = "none"; // Esconde o erro da senha
       }
-
     }
 
-    // Habilita ou desabilita o botão "Entrar" com base na validade dos campos
-    entrarBtn.disabled = !valido;
-
-    return valido; // Retorna verdadeiro se tudo estiver correto
+    return valido; // Retorna se o formulário está válido ou não
   }
 
-  // Evento para processar o envio do formulário
-  document
-    .getElementById("loginForm")
-    .addEventListener("submit", function (event) {
-      tentouEnviar = true; // Marca que o usuário tentou enviar
-      if (!validarCampos()) {
-        event.preventDefault(); // Impede o envio do formulário se houver erro
-      } else {
-        event.preventDefault(); // Impede o envio padrão
-        window.location.href = "Main.html"; // Redireciona para outra página se os campos estiverem corretos
-      }
-    });
+  // Adiciona um ouvinte de evento para quando o formulário for enviado
+  document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+    tentouEnviar = true;    // Marca que o usuário tentou enviar
 
-  // Adiciona eventos para validar os campos conforme o usuário digita
-  email.addEventListener("input", validarCampos);
-  senha.addEventListener("input", validarCampos);
+    // Se os campos forem válidos
+    if (validarCampos()) {
+      // Salva os dados digitados no localStorage com a chave "usuarioLogado"
+      localStorage.setItem("usuarioLogado", JSON.stringify({
+        email: email.value,
+        senha: senha.value
+      }));
+
+      // Redireciona o usuário para a página "Main.html"
+      window.location.href = "Main.html";
+    }
+  });
+
+  // Adiciona eventos nos campos de email e senha para validar enquanto digita
+  email.addEventListener("input", () => {
+    tentouEnviar = true; // Considera que está tentando enviar ao digitar
+    validarCampos();     // Valida os campos em tempo real
+  });
+
+  senha.addEventListener("input", () => {
+    tentouEnviar = true; // Considera que está tentando enviar ao digitar
+    validarCampos();     // Valida os campos em tempo real
+  });
+
 });
