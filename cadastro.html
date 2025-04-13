@@ -14,39 +14,44 @@
 
 <body id="principal">
 
-    <div id="login">
-        <div class="caixa">
-            <h1>CADASTRE-SE</h1>
-            <form id="cadastroForm">
-                <div class="name">
-                    <input type="text" id="nome" placeholder="Nome" minlength="3" maxlength="50" required>
-                    <p class="erro" id="erroNome" style="display: none;"></p>
-                </div>
+    <main>
+        <section id="login">
+            <article class="caixa">
+                <header>
+                    <h1>CADASTRE-SE</h1>
+                </header>
 
-                <div class="email">
-                    <input type="email" id="email" placeholder="E-mail" required>
-                    <p class="erro" id="erroEmail" style="display: none;"></p>
-                </div>
+                <form id="cadastroForm">
+                    <div class="name">
+                        <input type="text" id="nome" placeholder="Nome" minlength="3" maxlength="50" required>
+                        <p class="erro" id="erroNome" style="display: none;"></p>
+                    </div>
 
-                <div class="senha">
-                    <input type="password" id="senha" placeholder="Senha" minlength="4" maxlength="20" required>
-                    <p class="erro" id="erroSenha" style="display: none;"></p>
-                </div>
-                
-                <div class="senha">
-                    <input type="password" id="confirmarSenha" placeholder="Confirme a sua Senha" minlength="4" maxlength="20" required>
-                    <p class="erro" id="erroConfirmarSenha" style="display: none;"></p>
-                </div>
-                
+                    <div class="email">
+                        <input type="email" id="email" placeholder="E-mail" required>
+                        <p class="erro" id="erroEmail" style="display: none;"></p>
+                    </div>
 
-                <div class="entrar">
-                    <p>Já tem uma conta? <br> <a href="index.html">Fazer Login.</a></p>
-                    <input type="submit" id="cadastrarBtn" value="Cadastrar" >
-                </div>
-            </form>
-        </div>
-    </div>
+                    <div class="senha">
+                        <input type="password" id="senha" placeholder="Senha" minlength="4" maxlength="20" required>
+                        <p class="erro" id="erroSenha" style="display: none;"></p>
+                    </div>
 
-    <script src = 'Scripts/ScriptPgCadastro.js' ></script>
+                    <div class="senha">
+                        <input type="password" id="confirmarSenha" placeholder="Confirme a sua Senha" minlength="4" maxlength="20" required>
+                        <p class="erro" id="erroConfirmarSenha" style="display: none;"></p>
+                    </div>
 
+                    <div class="entrar">
+                        <p>Já tem uma conta? <br> <a href="index.html">Fazer Login.</a></p>
+                        <input   type="submit" id="cadastrarBtn" value="Cadastrar">
+                    </div>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <script src="Scripts/ScriptPgCadastro.js"></script>
 </body>
+
+</html>

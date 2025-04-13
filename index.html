@@ -20,35 +20,36 @@
 
 <body id="principal">
 
-    <div id="login">
+    <main>
+        <section id="login">
+            <article class="caixa">
+                <header>
+                    <h1>LOGIN</h1>
+                </header>
 
-        <div class="caixa">
+                <form id="loginForm"> 
 
-            <h1>LOGIN</h1>
+                    <div class="email">
+                        <input type="email" id="email" placeholder="E-mail" required>
+                        <p class="erro" id="erroEmail"></p> <!-- class erro é para o CSS e id erroEmail é para o JS -->
+                    </div>
+            
+                    <div class="senha">
+                        <input type="password" id="senha" placeholder="Senha" minlength="4" maxlength="20" required>
+                        <p class="erro" id="erroSenha"></p> <!-- class erro é para o CSS e id erroSenha é para o JS -->
+                    </div>
+            
+                    <div class="entrar">
+                        <p>Ainda não tem uma conta? <br> <a href="cadastro.html">Cadastrar-se.</a></p>
+                        <input type="submit" id="entrarBtn" value="Entrar"> <!--  id entrarBtn é para o JS -->
+                    </div>
 
-            <form id="loginForm"> 
+                </form>
+            </article>
+        </section>
+    </main>
 
-                <div class="email">
-                    <input type="email" id="email" placeholder="E-mail" required>
-                    <p class="erro" id="erroEmail"></p> <!-- class erro é para o CSS e id erroEmail é para o JS -->
-                </div>
-        
-                <div class="senha">
-                    <input type="password" id="senha" placeholder="Senha" minlength="4" maxlength="20" required>
-                    <p class="erro" id="erroSenha"></p> <!-- class erro é para o CSS e id erroSenha é para o JS -->
-                </div>
-        
-                <div class="entrar">
-                    <p>Ainda não tem uma conta? <br> <a href="cadastro.html">Cadastrar-se.</a></p>
-                    <input type="submit" id="entrarBtn" value="Entrar"> <!--  id entrarBtn é para o JS -->
-                </div>
-
-            </form>
-
-        </div>
-
-        <script src = 'Scripts/JavaScript.js' ></script>
-
+    <script src="Scripts/JavaScript.js"></script>
 </body>
 
 </html>
